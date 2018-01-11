@@ -1,0 +1,81 @@
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: auto;
+    background: blue;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial;
+}
+
+table.table1 {
+    width: 25%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table.table1 th{
+    height: 40px;
+    border: 1px solid black;
+}
+table.table1 tr {
+    height: 30px;
+}
+
+table.table2 {
+    width: 75%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table.table2 th{
+    height: 40px;
+    border: 1px solid black;
+}
+table.table2 tr {
+    height: 30px;
+}
+table.table2 td{
+    border: 1px solid black;
+
+}
+
+table.table3 {
+    width: 75%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table.table3 th{
+    height: 40px;
+    border: 1px solid black;
+}
+table.table3 tr {
+    height: 30px;
+}
+table.table3 td{
+    border: 1px solid black;
+
+}
+
+form {
+    text-align: center;
+    marigin-left: auto;
+    margin-right: auto;
+}
+
+span {
+    display: block;
+    height: 50px;
+}

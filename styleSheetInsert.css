@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: auto;
+    background: blue;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial;
+}
+
+form {
+    text-align: left;
+    marigin-left: auto;
+    margin-right: auto;
+}
+
+span {
+    display: block;
+    height: 50px;
+}
