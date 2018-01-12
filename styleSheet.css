@@ -79,3 +79,11 @@ span {
     display: block;
     height: 50px;
 }
+
+#insertButton {
+    display: inline-block;
+}
+
+#twoButtons {
+    text-align: center;
+}

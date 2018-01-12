@@ -10,4 +10,60 @@ class status
     function setStatusLate() { $this->status = "late"; }
 
     function getStatus() { return $this->status; }
+
+    function getPending() {
+        $server = new serverInfo();
+        $connect = new mysqli($server->getServerName(), $server->getusername(), $server->getpassword());
+        if ($connect->connect_error){ die(); }
+
+        $stmt = "use todo";
+        $connect->query($stmt);
+
+        $stmt = "SELECT * FROM status WHERE taskStatus='pending'";
+        $result = $connect->query($stmt);
+
+        return $result;
+    }
+
+    function getStarted() {
+        $server = new serverInfo();
+        $connect = new mysqli($server->getServerName(), $server->getusername(), $server->getpassword());
+        if ($connect->connect_error){ die(); }
+
+        $stmt = "use todo";
+        $connect->query($stmt);
+
+        $stmt = "SELECT * FROM status WHERE taskStatus='started'";
+        $result = $connect->query($stmt);
+
+        return $result;
+    }
+
+    function getCompleted() {
+        $server = new serverInfo();
+        $connect = new mysqli($server->getServerName(), $server->getusername(), $server->getpassword());
+        if ($connect->connect_error){ die(); }
+
+        $stmt = "use todo";
+        $connect->query($stmt);
+
+        $stmt = "SELECT * FROM status WHERE taskStatus='completed'";
+        $result = $connect->query($stmt);
+
+        return $result;
+    }
+
+    function getLate() {
+        $server = new serverInfo();
+        $connect = new mysqli($server->getServerName(), $server->getusername(), $server->getpassword());
+        if ($connect->connect_error){ die(); }
+
+        $stmt = "use todo";
+        $connect->query($stmt);
+
+        $stmt = "SELECT * FROM status WHERE taskStatus='late'";
+        $result = $connect->query($stmt);
+
+        return $result;
+    }
 }
