@@ -5,6 +5,7 @@
     include("serverInfo.php");
     include("taskClass.php");
     include("status.php");
+    include("dueDateClass.php");
     ?>
 <head>
     <title>ToDo List</title>
@@ -14,44 +15,11 @@
 
     <?php
     $server = new serverInfo();
-    $connect = new mysqli($server->getServerName(), $server->getusername(), $server->getpassword());
-    if ($connect->connect_error){ die(); }
-
-    $stmt = "CREATE DATABASE IF NOT EXISTS todo";
-    $connect->query($stmt);
-
-    $stmt = "use todo";
-    $connect->query($stmt);
-
-    $stmt = "CREATE TABLE IF NOT EXISTS tasks(taskid INT AUTO_INCREMENT, taskName VARCHAR(50), description VARCHAR(250), PRIMARY KEY (taskid))";
-    if($connect->query($stmt) === TRUE) {
-        //echo "executed";
-    }
-    else {
-        echo "Failed";
-    }
-
-    $stmt = "CREATE TABLE IF NOT EXISTS status(taskid INT, taskStatus VARCHAR(20), PRIMARY KEY(taskid), FOREIGN KEY(taskid) REFERENCES tasks(taskid))";
-    if($connect->query($stmt) === TRUE) {
-        //echo "executed";
-    }
-    else {
-        echo "Failed";
-    }
-
-    $stmt = "CREATE TABLE IF NOT EXISTS due_date(taskid INT, dueDate VARCHAR(20), PRIMARY KEY(taskid), FOREIGN KEY(taskid) REFERENCES tasks(taskid))";
-    if($connect->query($stmt) === TRUE) {
-        //echo "executed";
-    }
-    else {
-        echo "Failed";
-    }
-
-    $connect->close();
+    $server->createDatabase();
     ?>
 
 
-    <?php
+    <?php /*
     $server = new serverInfo();
     $connect = new mysqli($server->getServerName(), $server->getusername(), $server->getpassword());
     if ($connect->connect_error){ die(); }
@@ -70,7 +38,9 @@
      //   echo "Fuck me";
     //}
     $pstmt->close();
-    $connect->close();
+    $connect->close(); */
+    $temp = new taskClass();
+    //$temp->insertTask("task1","desc1","started","10/1/18")
     ?>
 
     <table class="table1">
@@ -141,6 +111,7 @@
 
     <div id="twoButtons">
         <a id="insertButton" href="insert.php"><button>INSERT TASK</button></a>
+        <a id="updateButton" href="update.php"><button>UPDATE TASK</button></a>
         <a id="deleteButton" href="delete.php"><button>DELETE TASK</button></a>
     </div>
 
@@ -164,13 +135,20 @@
 
         } else {
             $result = new taskClass();
-            $result = $result->getTasks();
-            while($row = mysqli_fetch_array($result)){
-                echo "<tr><td>";
-                echo $row['taskName'];
-                echo "</td><td>";
-                echo $row['description'];
-                echo "</td></tr>";
+            $result = $result->getEverything();
+
+            if($result) {
+                while ($row = mysqli_fetch_array($result)) {
+                    echo "<tr><td>";
+                    echo $row['taskName'];
+                    echo "</td><td>";
+                    echo $row['description'];
+                    echo "</td><td>";
+                    echo $row['taskStatus'];
+                    echo "</td><td>";
+                    echo $row['dueDate'];
+                    echo "</td></tr>";
+                }
             }
         }
         ?>
