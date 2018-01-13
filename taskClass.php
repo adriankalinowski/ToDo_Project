@@ -91,6 +91,20 @@ class taskClass
         $pstmt->execute();
         $pstmt->close();
 
+        $pstmt = $connect->prepare("DELETE FROM status WHERE taskidS=?");
+        $pstmt->bind_param("i",$tid);
+
+        $tid = $id;
+        $pstmt->execute();
+        $pstmt->close();
+
+        $pstmt = $connect->prepare("DELETE FROM due_date WHERE taskidD=?");
+        $pstmt->bind_param("i",$tid);
+
+        $tid = $id;
+        $pstmt->execute();
+        $pstmt->close();
+
         $connect->close();
     }
 
@@ -168,6 +182,16 @@ class taskClass
         $pstmt->close();
 
         $connect->close();
+    }
+
+    function checkDate() {
+        $result = new taskClass();
+        $result = $result->getEverything();
+
+        if($result) {
+            while ($row = mysqli_fetch_array($result)) {
+            }
+        }
     }
 }
 

@@ -5,6 +5,7 @@ class status
     var $status = "";
 
     function setStatus($status) { $this->status = $status; }
+
     function setStatusPending() { $this->status = "pending"; }
     function setStatusStarted() { $this->status = "started"; }
     function setStatusCompleted() { $this->status = "completed"; }

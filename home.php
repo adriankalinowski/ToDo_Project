@@ -11,37 +11,13 @@
     <title>ToDo List</title>
 </head>
 <body>
-    <h1>Hello Wiz!</h1>
+    <h1>To Do Application</h1>
 
     <?php
     $server = new serverInfo();
     $server->createDatabase();
     ?>
 
-
-    <?php /*
-    $server = new serverInfo();
-    $connect = new mysqli($server->getServerName(), $server->getusername(), $server->getpassword());
-    if ($connect->connect_error){ die(); }
-
-    $stmt = "use todo";
-    $connect->query($stmt);
-
-    $pstmt = $connect->prepare("INSERT INTO tasks(taskName, description) VALUES(?,?)");
-    $pstmt->bind_param("ss",$name, $desc);
-
-    $name = "task1";
-    $desc = "desc1";
-    $pstmt->execute();
-
-    //if($connect->query($stmt) === FALSE){
-     //   echo "Fuck me";
-    //}
-    $pstmt->close();
-    $connect->close(); */
-    $temp = new taskClass();
-    //$temp->insertTask("task1","desc1","started","10/1/18")
-    ?>
 
     <table class="table1">
         <th>Total Tasks</th>
@@ -61,10 +37,10 @@
     <span></span>
 
     <table class="table2">
-        <th>Pending Tasks</th>
-        <th>Started Tasks</th>
-        <th>Completed Tasks</th>
-        <th>Late Tasks</th>
+        <th><a href="pendingPage.php">Pending Tasks</a></th>
+        <th><a href="startedPage.php">Started Tasks</a></th>
+        <th><a href="completedPage.php">Completed Tasks</a></th>
+        <th><a href="latePage.php">Late Tasks</a></th>
         <tr>
             <td>
                 <?php
@@ -114,14 +90,6 @@
         <a id="updateButton" href="update.php"><button>UPDATE TASK</button></a>
         <a id="deleteButton" href="delete.php"><button>DELETE TASK</button></a>
     </div>
-
-    <br>
-    <form action="" method="post">
-        <input type="checkbox" name="tasktype" value="pending">Pending
-        <input type="checkbox" name="tasktype" value="started">Started
-        <input type="checkbox" name="tasktype" value="completed">Completed
-        <input type="checkbox" name="tasktype" value="late">Late
-    </form>
 
     <br>
 

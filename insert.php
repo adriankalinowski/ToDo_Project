@@ -33,14 +33,14 @@ include("dueDateClass.php");
     if(!empty($_POST["status"])){
         $statusVar->setStatus($_POST["status"]);
     }
-    if(!empty($_POST["task"]) && !empty($_POST["description"]) &&!empty($_POST["duedate"]) && !empty($_POST["status"])) {
+    if(!empty($_POST["task"]) && !empty($_POST["description"]) && !empty($_POST["duedate"]) && !empty($_POST["status"])) {
         $taskVar->insertTask($taskVar->getTaskName(), $taskVar->getDescription(), $statusVar->getStatus(), $duedateVar->getDueDate());
         header("refresh:0; url=home.php");
     }
 ?>
 
-<form method="post">
-    Task: <input type="text" name="task" value="">
+<form style="text-align: center" method="post">
+    Task Name: <input type="text" name="task" value="">
     <br><br>
     Description: <textarea name="description" rows="5" cols="20"></textarea>
     <br><br>
@@ -52,14 +52,6 @@ include("dueDateClass.php");
     <br><br>
     <input type="submit" name="submit" value="INSERT">
 </form>
-
-<?php
-
-if(!empty($_POST["task"]) && !empty($_POST["description"]) && !empty($_POST["duedate"]) && !empty($_POST["status"])) {
-    echo "<br><br><br>";
-    echo "";
-}
-?>
 
 </body>
 </html>

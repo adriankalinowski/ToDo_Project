@@ -17,29 +17,27 @@ include("dueDateClass.php");
 $taskVar = new taskClass();
 
 if(!empty($_POST["taskid"])){
-    //$taskVar->setTaskName($_POST["taskid"]);
     $taskVar->deleteTask($_POST["taskid"]);
     header("refresh:0; url=home.php");
 }
 ?>
 
 <form method="post">
-    Task ID: <input type="text" name="taskid">
-    <input type="submit" name="submit" value="DELETE">
-    <br><br>
-    Task ID: <select class="form-dropdown" id="dropdown" name="drop">
+    Task ID: <select class="form-dropdown" id="dropdown" name="taskid">
         <?php
+        $result = new taskClass();
         $result = $result->getEverything();
 
         if($result) {
             while ($row = mysqli_fetch_array($result)) {
-                echo "<option>";
+                echo '<option value="' . $row['taskid'] . '">';
                 echo $row['taskid'];
                 echo "</option>";
             }
         }
         ?>
     </select>
+    <input type="submit" name="submit" value="DELETE">
 </form>
 
 <br><br><br>

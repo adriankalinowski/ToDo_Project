@@ -33,7 +33,7 @@ class serverInfo
             echo "Failed";
         }
 
-        $stmt = "CREATE TABLE IF NOT EXISTS status(taskidS INT, taskStatus VARCHAR(20), PRIMARY KEY(taskidS), FOREIGN KEY(taskidS) REFERENCES tasks(taskid))";
+        $stmt = "CREATE TABLE IF NOT EXISTS status(taskidS INT, taskStatus VARCHAR(20), PRIMARY KEY(taskidS), FOREIGN KEY(taskidS) REFERENCES tasks(taskid) ON DELETE CASCADE)";
         if($connect->query($stmt) === TRUE) {
             //echo "executed";
         }
@@ -41,7 +41,7 @@ class serverInfo
             echo "Failed";
         }
 
-        $stmt = "CREATE TABLE IF NOT EXISTS due_date(taskidD INT, dueDate VARCHAR(20), PRIMARY KEY(taskidD), FOREIGN KEY(taskidD) REFERENCES tasks(taskid))";
+        $stmt = "CREATE TABLE IF NOT EXISTS due_date(taskidD INT, dueDate VARCHAR(20), PRIMARY KEY(taskidD), FOREIGN KEY(taskidD) REFERENCES tasks(taskid) ON DELETE CASCADE)";
         if($connect->query($stmt) === TRUE) {
             //echo "executed";
         }

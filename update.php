@@ -40,9 +40,22 @@ if(!empty($_POST["taskid"])) {
 ?>
 
 <form method="post">
-    Task ID: <input type="text" name="taskid">
+    Task ID: <select class="form-dropdown" id="dropdown" name="taskid">
+        <?php
+        $result = new taskClass();
+        $result = $result->getEverything();
+
+        if($result) {
+            while ($row = mysqli_fetch_array($result)) {
+                echo '<option value="' . $row['taskid'] . '">';
+                echo $row['taskid'];
+                echo "</option>";
+            }
+        }
+        ?>
+    </select>
     <br><br>
-    Task: <input type="text" name="task">
+    Task Name: <input type="text" name="task">
     <br><br>
     Description: <textarea name="description" rows="3" cols="12"></textarea>
     <br><br>
@@ -53,7 +66,7 @@ if(!empty($_POST["taskid"])) {
     <input type="radio" name="status" value="started">Started
     <input type="radio" name="status" value="completed">Completed
     <br><br>
-    <input type="submit" name="submit" value="INSERT">
+    <input type="submit" name="submit" value="UPDATE">
 </form>
 
 <br><br><br>
