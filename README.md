@@ -40,10 +40,11 @@ Light weight To Do Application to track tasks with four different statuses: pend
 5.
 6.
 
-## System Architecure Diagram
+## System Architecture Diagram
+![alt text](diagrams/systemArchitectureDiagram.jpg)
 
 ## Data Flow Diagram
-
+![alt text](diagrams/dataFlowDiagram.jpg)
 
 ## Use Cases
 1.
@@ -54,13 +55,13 @@ Light weight To Do Application to track tasks with four different statuses: pend
 6.
 
 ## Sequence Diagram
-
+![alt text](diagrams/sequenceDiagram.jpg)
 
 ## Database Diagram
-
+![alt text](diagrams/databaseDiagram.jpg)
 
 ## Class Diagram
-
+![alt text](diagrams/classDiagram.jpg)
 
 ## Test Cases
 1.
