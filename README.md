@@ -55,7 +55,7 @@ Light weight To Do Application to track tasks with four different statuses: pend
 6.
 
 ## Sequence Diagram
-![alt text](diagrams/sequenceDiagram.jpg)
+![alt text](diagrams/sequenceDiagram.png)
 
 ## Database Diagram
 ![alt text](diagrams/databaseDiagram.jpg)
