@@ -47,12 +47,12 @@ Light weight To Do Application to track tasks with four different statuses: pend
 ![alt text](diagrams/dataFlowDiagram.png)
 
 ## Use Cases
-1. 
-2. 
-3. 
-4. 
-5. 
-6. 
+1. Insert New Task - User has the ability to easily add new tasks.
+2. Delete Tasks - User has the ability to delete any task they would like.
+3. Update Task - User has ability to update any element of a certain task.
+4. View All Tasks - User has ability to view all tasks currently stores within database.
+5. View Task according to status - User has ability to view tasks according to one of the following: pending, started, completed, late. 
+6. View counts of tasks - User has ability to view counts of all tasks according to their status. 
 
 ## Sequence Diagram
 ![alt text](diagrams/sequenceDiagram.png)
@@ -64,12 +64,122 @@ Light weight To Do Application to track tasks with four different statuses: pend
 ![alt text](diagrams/classDiagram.png)
 
 ## Test Cases
-1.
-2.
-3.
-4.
-5.
-6.
+
+### Insert New Task
+#### Description
+Test the function of adding a new task to the todo table. 
+
+#### Steps
+1. Open browser and enter following into url: localhost/ToDo_Project/home.php
+2. Click on 'INSERT TASK' button.
+3. Fill in all the fields with your new task.
+4. Press 'INSERT'
+
+#### Expected Result
+A new task will be added to the database and will be reflected in the task table.
+
+#### Actual Result
+
+#### Pass/Fail
+
+## Work BreakDown
+
+
+
+### Update Task
+#### Description
+Update one or more elements of the task. 
+#### Steps
+1. Open browser and enter following into url: localhost/ToDo_Project/home.php
+2. Click on 'UPDATE TASK' button.
+3. Select the task ID of the task you would like to update from the drop down menu.
+4. Enter your changes in the boxes. Leave the field blank if you do not want to update that variable.
+5. Press 'UPDATE'
+
+#### Expected Result
+The field that was updated will be reflected within the database and in the table.
+
+#### Actual Result
+
+#### Pass/Fail
+
+
+
+
+### Delete Task
+#### Description
+Test the function of deleting a task that has already been created. 
+#### Steps
+1. Open browser and enter following into url: localhost/ToDo_Project/home.php
+2. Click on 'DELETE TASK' button.
+3. Select the task ID of the task you would like to delete from the drop down menu.
+4. Press 'DELETE'
+
+#### Expected Result
+Task will be deleted from database and will not show up in table. 
+
+#### Actual Result
+
+#### Pass/Fail
+
+## Work BreakDown
+
+
+
+
+
+### Filter for pending tasks
+#### Description
+View tasks with the status of pending.
+#### Steps
+1. Open browser and enter following into url: localhost/ToDo_Project/home.php
+2. Click on 'Pending Tasks'
+
+#### Expected Result
+Table will appear with all pending tasks.
+#### Actual Result
+
+#### Pass/Fail
+
+## Work BreakDown
+
+
+
+
+
+### Filter for started tasks
+#### Description
+View tasks with the status of started.
+#### Steps
+1. Open browser and enter following into url: localhost/ToDo_Project/home.php
+2. Click on 'Pending Tasks'
+
+#### Expected Result
+Table will appear with all started tasks.
+#### Actual Result
+
+#### Pass/Fail
+
+## Work BreakDown
+
+
+
+### Filter for completed tasks
+#### Description
+View tasks with the status of completed.
+#### Steps
+1. Open browser and enter following into url: localhost/ToDo_Project/home.php
+2. Click on 'Pending Tasks'
+
+#### Expected Result
+Table will appear with all completed tasks.
+#### Actual Result
+
+#### Pass/Fail
+
+## Work BreakDown
+
+
 
 ## Work BreakDown
 
