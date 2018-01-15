@@ -25,20 +25,20 @@ Light weight To Do Application to track tasks with four different statuses: pend
 4. The application will now be loaded. 
 
 ## Functional Requirements
-1. 
-2.
-3.
-4.
-5.
-6.
+1. Insert new tasks. 
+2. Ability to update existing tasks.
+3. Delete existing tasks.
+4. View all tasks.
+5. View tasks based on status.
+6. View counts according to status.
 
 ## Non-functional Requirements
-1.
-2.
-3.
-4.
-5.
-6.
+1. Efficient Queries. 
+2. Optimal use of classes.
+3. Fast performance.
+4. Ease of use.
+5. Integrity of data.
+6. Reliable.
 
 ## System Architecture Diagram
 ![alt text](diagrams/systemArchitectureDiagram.png)
@@ -47,12 +47,12 @@ Light weight To Do Application to track tasks with four different statuses: pend
 ![alt text](diagrams/dataFlowDiagram.png)
 
 ## Use Cases
-1.
-2.
-3.
-4.
-5.
-6.
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
 
 ## Sequence Diagram
 ![alt text](diagrams/sequenceDiagram.png)
@@ -72,6 +72,36 @@ Light weight To Do Application to track tasks with four different statuses: pend
 6.
 
 ## Work BreakDown
+
+### Install WAMP
+Estimated No of hours: 1
+Actual time spent: 1.5
+Notes:
+Issues:
+
+### Implement database using php
+Estimated No of hours: 2
+Actual time spent: 2.5
+Notes: Created a relation database. 
+Issues: No issues. 
+
+### Learn php syntax and implement OO programming
+Estimated No of hours: 5
+Actual time spent: 8
+Notes: implemented all my classes using php.
+Issues: It was difficult to understand how php was acting within an html file, especially when including other files which contained classes. 
+
+### Create layout of all pages
+Estimated No of hours: 5
+Actual time spent: 8
+Notes: Never really programmed in html and css. 
+Issues: Everything I wanted to implement required me to look up how to do. Ran into issues of styling as there was a learning curve with these languages. 
+
+### Documentation
+Estimated No of hours: 6
+Actual time spent: 12
+Notes: Did not know many of the diagrams or differences between functional and non functional requirements, so there was quite a bit of time spent researching. 
+Issues: Much of the information online ranged greatly and it was difficult to gain a good grasp of each concept. 
 
 
 ## Demo
