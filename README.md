@@ -82,8 +82,6 @@ A new task will be added to the database and will be reflected in the task table
 
 #### Pass/Fail
 
-## Work BreakDown
-
 
 
 ### Update Task
@@ -122,10 +120,6 @@ Task will be deleted from database and will not show up in table.
 
 #### Pass/Fail
 
-## Work BreakDown
-
-
-
 
 
 ### Filter for pending tasks
@@ -140,10 +134,6 @@ Table will appear with all pending tasks.
 #### Actual Result
 
 #### Pass/Fail
-
-## Work BreakDown
-
-
 
 
 
@@ -160,10 +150,6 @@ Table will appear with all started tasks.
 
 #### Pass/Fail
 
-## Work BreakDown
-
-
-
 ### Filter for completed tasks
 #### Description
 View tasks with the status of completed.
@@ -176,9 +162,6 @@ Table will appear with all completed tasks.
 #### Actual Result
 
 #### Pass/Fail
-
-## Work BreakDown
-
 
 
 ## Work BreakDown
